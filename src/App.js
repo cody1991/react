@@ -1,8 +1,10 @@
 import HelloWorld from './components/HelloWorld';
+import Counter from './components/Counter';
 function App() {
   return (
     <div>
-      <HelloWorld />
+      <HelloWorld name="codytang" />
+      <Counter />
     </div>
   );
 }
