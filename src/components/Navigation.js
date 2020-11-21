@@ -9,8 +9,11 @@ export default function Navigation() {
 
   if (showMenu) {
     menu = (
-      <div className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow">
-        Menu
+      <div className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3">
+        <span className="font-bold">Menu</span>
+        <ul>
+          <li>Home</li>
+        </ul>
       </div>
     );
 
