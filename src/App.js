@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <div className="relative pb-10 min-h-screen">
       {/* <HelloWorld name="codytang" /> */}
       {/* <Counter /> */}
 

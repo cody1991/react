@@ -17,7 +17,7 @@ export default function About() {
     Axios.get(url)
       .then((res) => {
         setProduct(res.data);
-        setLoading(true);
+        setLoading(false);
       })
       .catch(() => {
         setLoading(false);
@@ -38,7 +38,6 @@ export default function About() {
   if (product) {
     content = (
       <div>
-        <span>{loading}</span>
         <h1 className="text-2xl font-bold mb-3">{product.name}</h1>
         <div>
           <img src={product.images} alt={product.name} />
