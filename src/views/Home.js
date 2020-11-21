@@ -1,26 +1,10 @@
-import Axios from 'axios';
-import { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
 import ProductCard from '../components/ProductCard';
+import useAxiosGet from '../hooks/HttpRequest';
 export default function About() {
   const url = `https://5fb8b6472f145f0016c3c7bd.mockapi.io/products?page=1&limit=10`;
-  const [products, setProducts] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setError(false);
-    Axios.get(url)
-      .then((res) => {
-        setProducts(res.data);
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
-        setError(true);
-      });
-  }, [url]);
+  const { data: products, error, loading } = useAxiosGet(url);
 
   let content = null;
 
